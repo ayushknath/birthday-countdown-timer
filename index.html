@@ -4,33 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Birthday countdown timer</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="app-container">
-      <!-- Confetti -->
-      <video class="confetti" autoplay loop>
-        <source src="assets/confetti.mp4" type="video/mp4" />
-        Sorry, but your browser cannot play the confetti animation
-      </video>
+      <!-- Input -->
+      <form>
+        <div class="form-handle">
+          <input
+            type="number"
+            min="1"
+            max="31"
+            name="birth-date"
+            id="birth-date"
+            class="birthday-input"
+            placeholder="Enter your birth date"
+          />
+        </div>
 
-      <!-- Overlay -->
-      <div class="overlay"></div>
+        <div class="form-handle">
+          <input
+            type="number"
+            min="1"
+            max="12"
+            name="birth-month"
+            id="birth-month"
+            class="birthday-input"
+            placeholder="Enter your birth month"
+          />
+        </div>
 
-      <!-- Birthday card -->
-      <div class="bday-card">
-        <h1>Happy Birthday <span class="bday-person"></span> 🥳🎉</h1>
-        <p>
-          A very Happy Birthday to you <span class="bday-person"></span>. May
-          this day bring joy and blessings in your life and may God give you the
-          strength to achieve your dreams. Its your day to enjoy, so celebrate
-          this special day to its fullest.
+        <div class="form-handle">
+          <input
+            type="number"
+            min="2000"
+            max="3000"
+            name="birth-year"
+            id="birth-year"
+            class="birthday-input"
+            placeholder="Enter your birth year"
+          />
+        </div>
+
+        <div class="form-submit">
+          <button class="bday-submit text-upper" type="submit">
+            Start timer
+          </button>
+        </div>
+      </form>
+
+      <!-- Timer -->
+      <div class="timer-container">
+        <h2 class="text-upper">Birthday in:</h2>
+        <p class="timer">
+          <span class="timer-days">--</span
+          ><span class="timer-unit text-upper">days</span>
+        </p>
+        <p class="timer">
+          <span class="timer-hours">--</span
+          ><span class="timer-unit text-upper">hrs</span>
+        </p>
+        <p class="timer">
+          <span class="timer-minutes">--</span
+          ><span class="timer-unit text-upper">mins</span>
+        </p>
+        <p class="timer">
+          <span class="timer-seconds">--</span
+          ><span class="timer-unit text-upper">secs</span>
         </p>
       </div>
     </div>
 
-    <!-- Script for displaying name -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
