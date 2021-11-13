@@ -1,0 +1,35 @@
+@media only screen and (max-width: 426px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .birthday-input {
+    width: 100%;
+    padding: 0.875rem;
+  }
+
+  .timer-container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+
+  .timer-container h2 {
+    font-size: 1rem;
+    margin-bottom: 0;
+    margin-right: 0;
+    grid-column: 1 / 5;
+  }
+
+  .timer {
+    font-size: 1.5rem;
+    margin-right: 0;
+    display: initial;
+  }
+}
