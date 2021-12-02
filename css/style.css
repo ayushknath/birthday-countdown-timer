@@ -1,0 +1,209 @@
+:root {
+  --black: #10191f;
+  --blue: #206bd8;
+  --form-border-opacity: 0.3;
+  --form-bg-opacity: 0.15;
+  --form-bg-blur: 10px;
+  --form-border-radius: 2rem;
+  --input-border-radius: 0.875rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+section {
+  padding: 2rem;
+}
+
+p,
+ul,
+ol {
+  line-height: 1.5;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+/* Utilities */
+.text-cap {
+  text-transform: capitalize;
+}
+
+.font-large {
+  font-size: 2rem;
+}
+
+.font-medium {
+  font-size: 1.5rem;
+}
+
+.font-regular {
+  font-size: 1rem;
+}
+
+/* Main styles */
+.app-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  color: #fff;
+  background-color: var(--black);
+}
+
+/* About section */
+.about-section {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.about-section .app-steps {
+  margin-top: 3rem;
+}
+
+/* Form section */
+.form-section {
+  position: relative;
+}
+
+.form-section .birthday-form {
+  width: 500px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  border-radius: var(--form-border-radius);
+  border: 1px solid rgba(255, 255, 255, var(--form-border-opacity));
+  background-color: rgba(255, 255, 255, var(--form-bg-opacity));
+  backdrop-filter: blur(var(--form-bg-blur));
+}
+
+.form-section .birthday-form div:not(.timer-button-wrapper):not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.form-section .birthday-form .timer-button-wrapper {
+  margin-top: 3rem;
+}
+
+.form-section .birthday-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-section .birthday-form input {
+  border: 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.125rem;
+  outline-offset: -2px;
+  outline: 3px solid transparent;
+  border-radius: var(--input-border-radius);
+}
+
+.form-section .birthday-form input:focus {
+  outline-color: var(--blue);
+}
+
+.form-section .birthday-form .timer-button {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--blue);
+  border-radius: var(--input-border-radius);
+}
+
+.form-section .birthday-form .timer-button:focus {
+  background-color: rgba(32, 107, 216, 0.93);
+}
+
+.form-section .star1,
+.form-section .star2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-section .star1 {
+  top: 74%;
+  left: -65px;
+}
+
+.form-section .star2 {
+  top: -5%;
+  left: 65%;
+}
+
+/* Media query for tablets */
+@media only screen and (max-width: 920px) {
+  .app-container {
+    height: auto;
+    grid-template-columns: auto;
+    align-items: initial;
+  }
+
+  .form-section .birthday-form {
+    padding: 4rem 3rem;
+  }
+
+  .form-section .birthday-form input {
+    padding: 0.875rem 1rem;
+  }
+}
+
+/* Media query for smartphones */
+@media only screen and (max-width: 650px) {
+  :root {
+    --form-border-radius: 1rem;
+    --input-border-radius: 0.5rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .about-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .form-section .birthday-form {
+    max-width: 300px;
+    padding: 3rem 2rem;
+  }
+
+  .form-section .birthday-form div:not(.timer-button-wrapper):not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-section .birthday-form .timer-button-wrapper {
+    margin-top: 2rem;
+  }
+
+  .form-section .birthday-form input {
+    padding: 0.5rem 1rem;
+  }
+
+  .form-section .star1 {
+    display: none;
+  }
+
+  .form-section .star2 {
+    top: -10%;
+    left: 65%;
+  }
+}

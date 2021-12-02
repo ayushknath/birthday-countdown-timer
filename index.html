@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Coundown Timer - Ayush Kumar Nath</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <section class="about-section">
+        <article class="app-info">
+          <h1 class="font-large">Birthday Countdown Timer</h1>
+          <p>
+            Fill up the form on right side to start the timer showing the
+            remaining time to the specified birthday. Upon hitting zero, a
+            buzzer will start to buzz reminding you to wish the person.
+          </p>
+        </article>
+
+        <article class="app-steps">
+          <h2>Steps:</h2>
+          <ol class="steps">
+            <li>Enter the date (1-31)</li>
+            <li>Enter the month (1-12)</li>
+            <li>Enter the year</li>
+            <li>Click on the <q>Start Timer</q> button</li>
+          </ol>
+        </article>
+      </section>
+
+      <section class="form-section">
+        <div class="star1">
+          <svg
+            width="199"
+            height="207"
+            viewBox="0 0 199 207"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M93.9376 2.36272C97.039 -0.637551 101.961 -0.637548 105.062 2.36273L123.018 19.7326C124.791 21.4483 127.257 22.2496 129.7 21.904L154.436 18.4053C158.709 17.8009 162.691 20.694 163.436 24.9442L167.753 49.5506C168.179 51.981 169.703 54.0787 171.883 55.2353L193.951 66.9441C197.763 68.9665 199.284 73.6476 197.389 77.5243L186.417 99.9684C185.334 102.185 185.334 104.778 186.417 106.995L197.389 129.439C199.284 133.316 197.763 137.997 193.951 140.019L171.883 151.728C169.703 152.885 168.179 154.982 167.753 157.413L163.436 182.019C162.691 186.269 158.709 189.162 154.436 188.558L129.7 185.059C127.257 184.714 124.791 185.515 123.018 187.231L105.062 204.601C101.961 207.601 97.039 207.601 93.9376 204.601L75.9824 187.231C74.2089 185.515 71.7429 184.714 69.2997 185.059L44.5638 188.558C40.2912 189.162 36.3093 186.269 35.5637 182.019L31.2474 157.413C30.8211 154.982 29.297 152.885 27.1172 151.728L5.04901 140.019C1.2372 137.997 -0.283769 133.316 1.61128 129.439L12.5826 106.995C13.6663 104.778 13.6663 102.185 12.5826 99.9684L1.61128 77.5243C-0.283771 73.6476 1.23721 68.9665 5.04901 66.9441L27.1173 55.2353C29.297 54.0787 30.8211 51.981 31.2474 49.5506L35.5637 24.9442C36.3093 20.694 40.2912 17.8009 44.5638 18.4053L69.2997 21.904C71.7429 22.2496 74.2089 21.4483 75.9824 19.7326L93.9376 2.36272Z"
+              fill="url(#paint0_linear_12_78)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_12_78"
+                x1="99.5"
+                y1="-3.01831"
+                x2="99.5"
+                y2="209.982"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#EDCD27" />
+                <stop offset="1" stop-color="#69DD0F" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="star2">
+          <svg
+            width="319"
+            height="314"
+            viewBox="0 0 319 314"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.3816 82.6743C19.3339 78.4883 21.7949 74.2258 25.9439 73.04L68.6518 60.8347C71.0244 60.1566 72.9513 58.4216 73.8736 56.1329L90.4763 14.9348C92.0892 10.9325 96.5857 8.93056 100.639 10.41L142.365 25.6387C144.683 26.4847 147.261 26.2137 149.353 24.9042L187 1.33308C190.658 -0.956817 195.472 0.0665161 197.882 3.64604L222.688 40.4919C224.066 42.5389 226.311 43.8353 228.773 44.0053L273.085 47.0645C277.39 47.3617 280.683 51.0194 280.529 55.3318L278.939 99.721C278.851 102.187 279.906 104.556 281.797 106.14L315.849 134.661C319.157 137.432 319.671 142.327 317.011 145.725L289.634 180.702C288.113 182.646 287.574 185.182 288.173 187.575L298.957 230.664C300.005 234.85 297.544 239.113 293.395 240.299L250.687 252.504C248.314 253.182 246.387 254.917 245.465 257.206L228.862 298.404C227.249 302.406 222.753 304.408 218.699 302.929L176.974 287.7C174.656 286.854 172.077 287.125 169.986 288.434L132.338 312.006C128.681 314.295 123.866 313.272 121.457 309.693L96.6511 272.847C95.2731 270.8 93.0276 269.503 90.5659 269.333L46.2536 266.274C41.9488 265.977 38.6553 262.319 38.8098 258.007L40.3992 213.618C40.4875 211.152 39.4329 208.783 37.5412 207.198L3.49002 178.677C0.182001 175.907 -0.33249 171.012 2.32716 167.614L29.7044 132.636C31.2253 130.693 31.7644 128.157 31.1653 125.763L20.3816 82.6743Z"
+              fill="url(#paint0_linear_12_79)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_12_79"
+                x1="18.5026"
+                y1="75.1667"
+                x2="300.836"
+                y2="238.172"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#E927ED" />
+                <stop offset="1" stop-color="#380FDD" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <form class="birthday-form">
+          <div class="birth-date-wrapper">
+            <label class="text-cap" for="birth-date">Enter Date</label>
+            <input id="birth-date" type="number" min="1" max="31" />
+          </div>
+
+          <div class="birth-month-wrapper">
+            <label class="text-cap" for="birth-month">Enter Month</label>
+            <input id="birth-month" type="number" min="1" max="12" />
+          </div>
+
+          <div class="birth-year-wrapper">
+            <label class="text-cap" for="birth-year">Enter Year</label>
+            <input id="birth-year" type="number" min="1900" max="2100" />
+          </div>
+
+          <div class="timer-button-wrapper">
+            <button class="timer-button text-cap" type="submit">
+              Start Timer
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
