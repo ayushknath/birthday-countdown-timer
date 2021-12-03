@@ -127,8 +127,8 @@ button {
   border-radius: var(--input-border-radius);
 }
 
-.form-section .birthday-form .timer-button:focus {
-  background-color: rgba(32, 107, 216, 0.93);
+.form-section .birthday-form .timer-button:active {
+  background-color: rgba(32, 107, 216, 0.9);
 }
 
 .form-section .star1,
