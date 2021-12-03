@@ -78,10 +78,10 @@ button {
 }
 
 .form-section .birthday-form {
-  width: 500px;
+  width: 450px;
   max-width: 500px;
   margin: 0 auto;
-  padding: 5rem 3rem;
+  padding: 4rem 3rem;
   border-radius: var(--form-border-radius);
   border: 2px solid rgba(255, 255, 255, var(--form-border-opacity));
   background-color: rgba(255, 255, 255, var(--form-bg-opacity));
@@ -154,10 +154,6 @@ button {
     height: auto;
     grid-template-columns: auto;
     align-items: initial;
-  }
-
-  .form-section .birthday-form {
-    padding: 4rem 3rem;
   }
 
   .form-section .birthday-form input {
