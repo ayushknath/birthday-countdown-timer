@@ -3,6 +3,11 @@ const hours = document.querySelector(".hours");
 const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 const timerButton = document.querySelector(".timer-button");
+const aboutSection = document.querySelector(".about-section");
+const formSection = document.querySelector(".form-section");
+const star1 = document.querySelector(".form-section .star1");
+const star2 = document.querySelector(".form-section .star2");
+const countdownSection = document.querySelector(".countdown-section");
 const birthday = new Date();
 let t;
 
@@ -29,18 +34,26 @@ function birthdayTimer(bigDay) {
 
 timerButton.addEventListener("click", (e) => {
   e.preventDefault();
+
   let userDate = parseInt(document.querySelector("#birth-date").value);
   let userMonth = parseInt(document.querySelector("#birth-month").value);
+
   if (isNaN(userDate) || isNaN(userMonth))
     alert("Provide specified inputs properly!");
   else if (userMonth - 1 !== birthday.getMonth())
-    alert("Sorry, the birthday should be in this month");
+    alert("Sorry but the birthday should be within this month");
   else {
     birthday.setMonth(userMonth - 1);
     birthday.setDate(userDate - 1);
     birthday.setHours(23);
     birthday.setMinutes(59);
     birthday.setSeconds(59);
+
+    aboutSection.classList.add("disappear");
+    formSection.classList.add("slide");
+    star1.classList.add("rotate-clock");
+    star2.classList.add("rotate-anti-clock");
+    countdownSection.classList.add("appear");
 
     t = setInterval(() => {
       birthdayTimer(birthday);

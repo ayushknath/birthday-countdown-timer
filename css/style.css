@@ -52,6 +52,7 @@ button {
 
 /* Main styles */
 .app-container {
+  position: relative;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -68,6 +69,24 @@ button {
   padding-right: 5rem;
 }
 
+.about-section.disappear {
+  animation: disappear 1s forwards;
+}
+
+@keyframes disappear {
+  10% {
+    transform: scale(1.055);
+  }
+
+  20% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
 .about-section .app-steps {
   margin-top: 3rem;
 }
@@ -75,6 +94,28 @@ button {
 /* Form section */
 .form-section {
   position: relative;
+}
+
+.form-section.slide {
+  animation: slide-left 1s forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: scale(1.055);
+  }
+
+  80% {
+    transform: translateX(-155%) scale(1.055);
+  }
+
+  100% {
+    transform: translateX(-155%) scale(1);
+  }
 }
 
 .form-section .birthday-form {
@@ -136,6 +177,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  transition: 1s transform ease-in-out;
 }
 
 .form-section .star1 {
@@ -143,19 +185,41 @@ button {
   left: -65px;
 }
 
+.form-section .star1.rotate-clock {
+  transform: rotateZ(360deg);
+}
+
 .form-section .star2 {
   top: -5%;
   left: 65%;
 }
 
+.form-section .star2.rotate-anti-clock {
+  transform: rotateZ(-360deg);
+}
+
 /* Timer section */
 .countdown-section {
-  display: none;
+  position: absolute;
+  top: 50%;
+  right: 8.25%;
+  transform: translate(200%, -50%);
+  transition: 1s transform;
+}
+
+.countdown-section.appear {
+  transform: translate(0, -50%);
 }
 
 .countdown-wrapper {
   margin-bottom: 1rem;
   font-size: 3rem;
+  text-align: center;
+}
+
+.countdown-wrapper small {
+  font-size: 1.5rem;
+  margin-left: 6px;
 }
 
 .countdown-section p:nth-child(2) {
@@ -172,8 +236,44 @@ button {
     align-items: initial;
   }
 
+  .form-section.slide {
+    animation: move-up 1s forwards;
+  }
+
+  @keyframes move-up {
+    0% {
+      transform: translateY(0);
+    }
+
+    20% {
+      transform: scale(1.055);
+    }
+
+    80% {
+      transform: translateY(-70vh) scale(1.055);
+    }
+
+    100% {
+      transform: translateY(-70vh) scale(1);
+    }
+  }
+
   .form-section .birthday-form input {
     padding: 0.875rem 1rem;
+  }
+
+  /* Timer section */
+  .countdown-section {
+    width: 100%;
+    top: initial;
+    right: initial;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+  }
+
+  .countdown-section.appear {
+    transform: translate(-50%, 0);
   }
 }
 
@@ -218,5 +318,13 @@ button {
   .form-section .star2 {
     top: -10%;
     left: 65%;
+  }
+
+  .countdown-wrapper {
+    font-size: 9vw;
+  }
+
+  .countdown-section p:nth-child(2) {
+    font-size: 6vw;
   }
 }
