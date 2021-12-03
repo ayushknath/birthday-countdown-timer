@@ -148,6 +148,22 @@ button {
   left: 65%;
 }
 
+/* Timer section */
+.countdown-section {
+  display: none;
+}
+
+.countdown-wrapper {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.countdown-section p:nth-child(2) {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 /* Media query for tablets */
 @media only screen and (max-width: 920px) {
   .app-container {
