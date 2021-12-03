@@ -2,7 +2,7 @@
   --black: #10191f;
   --blue: #206bd8;
   --form-border-opacity: 0.3;
-  --form-bg-opacity: 0.15;
+  --form-bg-opacity: 0.1;
   --form-bg-blur: 10px;
   --form-border-radius: 2rem;
   --input-border-radius: 0.875rem;
@@ -83,7 +83,7 @@ button {
   margin: 0 auto;
   padding: 5rem 3rem;
   border-radius: var(--form-border-radius);
-  border: 1px solid rgba(255, 255, 255, var(--form-border-opacity));
+  border: 2px solid rgba(255, 255, 255, var(--form-border-opacity));
   background-color: rgba(255, 255, 255, var(--form-bg-opacity));
   backdrop-filter: blur(var(--form-bg-blur));
 }
